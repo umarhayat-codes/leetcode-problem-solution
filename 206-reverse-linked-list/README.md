@@ -1,43 +1,34 @@
+<h2><a href="https://leetcode.com/problems/reverse-linked-list">Reverse Linked List</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given the <code>head</code> of a singly linked list, reverse the list, and return <em>the reversed list</em>.</p>
 
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg" style="width: 542px; height: 222px;" />
+<pre>
+<strong>Input:</strong> head = [1,2,3,4,5]
+<strong>Output:</strong> [5,4,3,2,1]
+</pre>
 
-# Reverse Linked List
+<p><strong class="example">Example 2:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg" style="width: 182px; height: 222px;" />
+<pre>
+<strong>Input:</strong> head = [1,2]
+<strong>Output:</strong> [2,1]
+</pre>
 
-Given the head of a singly linked list, reverse the list, and return the reversed list.
+<p><strong class="example">Example 3:</strong></p>
 
-## Constrain
+<pre>
+<strong>Input:</strong> head = []
+<strong>Output:</strong> []
+</pre>
 
-- The number of nodes in the list is the range [0, 5000].
-- -5000 <= Node.val <= 5000
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
+<ul>
+	<li>The number of nodes in the list is the range <code>[0, 5000]</code>.</li>
+	<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
+</ul>
 
-## Example 1
-
-```javascript
-
-
-Input: head = [1,2,3,4,5]
-Output: [5,4,3,2,1]
-
-```
-
-
-
-
-
-
-
-
-
-# Dry Run Table for reverseLinkList Function
-
-| **Step** | **cur** (Current Node)                     | **tempNext** (Next Node)                     | **cur.next** (Reversed Link)                           | **prev** (Previous Node)                               | **Updated cur**                   |
-|----------|-------------------------------------------|----------------------------------------------|-------------------------------------------------------|-------------------------------------------------------|-----------------------------------|
-| 1        | `1 -> 2 -> 3 -> 4 -> 5`                  | `2 -> 3 -> 4 -> 5`                          | `None`                                               | `1 -> None`                                         | `2 -> 3 -> 4 -> 5`               |
-| 2        | `2 -> 3 -> 4 -> 5`                       | `3 -> 4 -> 5`                               | `1 -> None`                                           | `2 -> 1 -> None`                                      | `3 -> 4 -> 5`                    |
-| 3        | `3 -> 4 -> 5`                            | `4 -> 5`                                    | `2 -> 1 -> None`                                      | `3 -> 2 -> 1 -> None`                                 | `4 -> 5`                         |
-| 4        | `4 -> 5`                                 | `5`                                         | `3 -> 2 -> 1 -> None`                                 | `4 -> 3 -> 2 -> 1 -> None`                            | `5`                              |
-| 5        | `5`                                      | `None`                                      | `4 -> 3 -> 2 -> 1 -> None`                            | `5 -> 4 -> 3 -> 2 -> 1 -> None`                       | `None`                           |
-
-# Final Result:
-`5 -> 4 -> 3 -> 2 -> 1 -> None`
-
+<p>&nbsp;</p>
+<p><strong>Follow up:</strong> A linked list can be reversed either iteratively or recursively. Could you implement both?</p>
