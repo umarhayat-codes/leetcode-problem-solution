@@ -1,45 +1,27 @@
+<h2><a href="https://leetcode.com/problems/palindrome-linked-list">Palindrome Linked List</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given the <code>head</code> of a singly linked list, return <code>true</code><em> if it is a </em><span data-keyword="palindrome-sequence"><em>palindrome</em></span><em> or </em><code>false</code><em> otherwise</em>.</p>
 
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/03/pal1linked-list.jpg" style="width: 422px; height: 62px;" />
+<pre>
+<strong>Input:</strong> head = [1,2,2,1]
+<strong>Output:</strong> true
+</pre>
 
-# Palindrome Linked List
+<p><strong class="example">Example 2:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/03/pal2linked-list.jpg" style="width: 182px; height: 62px;" />
+<pre>
+<strong>Input:</strong> head = [1,2]
+<strong>Output:</strong> false
+</pre>
 
-Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-## Constrain
+<ul>
+	<li>The number of nodes in the list is in the range <code>[1, 10<sup>5</sup>]</code>.</li>
+	<li><code>0 &lt;= Node.val &lt;= 9</code></li>
+</ul>
 
-- The number of nodes in the list is in the range [1, 105].
-- 0 <= Node.val <= 9
-
-
-## Example 1
-
-```javascript
-
-
-Input: head = [1,2,2,1]
-Output: true
-
-```
-
-
-
-
-
-
-
-
-## Dry Run for `isPalindrome` Function
-
-Suppose the linked list is `1 -> 2 -> 2 -> 1`.
-
-| Step | Current Node Value (`curr.val`) | Array (`arr`)        | Comment                          |
-|------|---------------------------------|----------------------|----------------------------------|
-| 1    | 1                               | `[1]`               | Append `1` to `arr`.            |
-| 2    | 2                               | `[1, 2]`            | Append `2` to `arr`.            |
-| 3    | 2                               | `[1, 2, 2]`         | Append `2` to `arr`.            |
-| 4    | 1                               | `[1, 2, 2, 1]`      | Append `1` to `arr`.            |
-| 5    | `None`                          | `[1, 2, 2, 1]`      | Reached the end of the list.    |
-| 6    | -                               | `arr == arr[::-1]`  | Check if the array is a palindrome. Result: `True`. |
-
-# Final Result:
-`1 -> 2 -> 2 -> 1 -> True`
-
+<p>&nbsp;</p>
+<strong>Follow up:</strong> Could you do it in <code>O(n)</code> time and <code>O(1)</code> space?
