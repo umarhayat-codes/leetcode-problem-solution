@@ -4,7 +4,6 @@ class Solution:
             return 0
        
         nums.sort()
-        arr = []
         min_diff = float('inf')
        
         for i in range(len(nums) - k + 1):
