@@ -1,40 +1,22 @@
+<h2><a href="https://leetcode.com/problems/move-zeroes">Move Zeroes</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer array <code>nums</code>, move all <code>0</code>&#39;s to the end of it while maintaining the relative order of the non-zero elements.</p>
 
-# Move Zeroes
+<p><strong>Note</strong> that you must do this in-place without making a copy of the array.</p>
 
-Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<pre><strong>Input:</strong> nums = [0,1,0,3,12]
+<strong>Output:</strong> [1,3,12,0,0]
+</pre><p><strong class="example">Example 2:</strong></p>
+<pre><strong>Input:</strong> nums = [0]
+<strong>Output:</strong> [0]
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-Note that you must do this in-place without making a copy of the array.
- 
+<ul>
+	<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
 
-## Constrain
-
-
-- 1 <= nums.length <= 10^4
-- -231 <= nums[i] <= 2^31 - 1
-
-## Example 1
-
-```
-Input: nums = [0,1,0,3,12]
-Output: [1,3,12,0,0]
-
-```
-
-
-
-
-### Step-by-Step Table
-
-| **Iteration** | **Index (i)** | **nums[i]** | **Left Pointer (l)** | **Action**                                              | **Array State**   |
-|---------------|---------------|-------------|-----------------------|--------------------------------------------------------|-------------------|
-| Start         | -             | -           | 0                     | Initial state                                          | `[0, 1, 0, 3, 12]` |
-| 1             | 0             | 0           | 0                     | Zero, so no action                                     | `[0, 1, 0, 3, 12]` |
-| 2             | 1             | 1           | 0                     | Swap `nums[l]` and `nums[i]`, then `l += 1`           | `[1, 0, 0, 3, 12]` |
-| 3             | 2             | 0           | 1                     | Zero, so no action                                     | `[1, 0, 0, 3, 12]` |
-| 4             | 3             | 3           | 1                     | Swap `nums[l]` and `nums[i]`, then `l += 1`           | `[1, 3, 0, 0, 12]` |
-| 5             | 4             | 12          | 2                     | Swap `nums[l]` and `nums[i]`, then `l += 1`           | `[1, 3, 12, 0, 0]` |
-| End           | -             | -           | -                     | Final array after all iterations                      | `[1, 3, 12, 0, 0]` |
-"""
-### Final Result
-
-After all steps, `nums` becomes `[1,3,12,0,0]`.
+<p>&nbsp;</p>
+<strong>Follow up:</strong> Could you minimize the total number of operations done?
